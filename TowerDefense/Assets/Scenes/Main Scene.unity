@@ -5099,6 +5099,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
+  - waveName: wave 1
+    spawnInterval: 3
+    enemySpawnConfigs:
+    - enemyPrefab: {fileID: 5005700557230079969, guid: d3296a26161c2d444846505b862b7011,
+        type: 3}
+      count: 5
+  - waveName: wave 2
+    spawnInterval: 3
+    enemySpawnConfigs:
+    - enemyPrefab: {fileID: 5005700557230079969, guid: d3296a26161c2d444846505b862b7011,
+        type: 3}
+      count: 4
+    - enemyPrefab: {fileID: 5005700557230079969, guid: 5ff0a52444456a94a8124901b0902f29,
+        type: 3}
+      count: 1
   - waveName: wave 3
     spawnInterval: 2
     enemySpawnConfigs:
@@ -5117,27 +5132,18 @@ MonoBehaviour:
     - enemyPrefab: {fileID: 5005700557230079969, guid: 5ff0a52444456a94a8124901b0902f29,
         type: 3}
       count: 3
-  - waveName: wave 1
-    spawnInterval: 3
-    enemySpawnConfigs:
-    - enemyPrefab: {fileID: 5005700557230079969, guid: d3296a26161c2d444846505b862b7011,
-        type: 3}
-      count: 5
-  - waveName: wave 2
-    spawnInterval: 3
-    enemySpawnConfigs:
-    - enemyPrefab: {fileID: 5005700557230079969, guid: d3296a26161c2d444846505b862b7011,
-        type: 3}
-      count: 4
-    - enemyPrefab: {fileID: 5005700557230079969, guid: 5ff0a52444456a94a8124901b0902f29,
-        type: 3}
-      count: 1
   - waveName: wave 5
     spawnInterval: 2
     enemySpawnConfigs:
     - enemyPrefab: {fileID: 5005700557230079969, guid: 5ff0a52444456a94a8124901b0902f29,
         type: 3}
       count: 5
+  - waveName: wave 6
+    spawnInterval: 0.05
+    enemySpawnConfigs:
+    - enemyPrefab: {fileID: 5005700557230079969, guid: 5ff0a52444456a94a8124901b0902f29,
+        type: 3}
+      count: 55
   pauseBetweenWaves: 5
   enemySpawner: {fileID: 1797599686}
 --- !u!4 &877961769
@@ -11004,7 +11010,7 @@ Transform:
   m_GameObject: {fileID: 3572566988370349853}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.25, y: 0, z: -6}
+  m_LocalPosition: {x: 13.75, y: 0, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
