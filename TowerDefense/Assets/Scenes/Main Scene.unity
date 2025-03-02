@@ -5901,6 +5901,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1112413439}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1139625902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8489285494593912208, guid: 3ffba4d96c53ade40bde068faec16f3b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4947042079647561759}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1139625907
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139625902}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6, y: 3, z: 6}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &1142758042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10872,10 +10899,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: tower
       objectReference: {fileID: 0}
+    - target: {fileID: 3259863382161519774, guid: 3ffba4d96c53ade40bde068faec16f3b,
+        type: 3}
+      propertyPath: bulletprefab
+      value: 
+      objectReference: {fileID: 1997035204259234091, guid: 395a504db8ba3df418c94b21088155f6,
+        type: 3}
     - target: {fileID: 8001674600624400601, guid: 3ffba4d96c53ade40bde068faec16f3b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 8001674600624400601, guid: 3ffba4d96c53ade40bde068faec16f3b,
         type: 3}
@@ -10922,10 +10955,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1959906399226450732, guid: 3ffba4d96c53ade40bde068faec16f3b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8489285494593912208, guid: 3ffba4d96c53ade40bde068faec16f3b,
+        type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1139625907}
   m_SourcePrefab: {fileID: 100100000, guid: 3ffba4d96c53ade40bde068faec16f3b, type: 3}
 --- !u!1001 &5061579708417262857
 PrefabInstance:
