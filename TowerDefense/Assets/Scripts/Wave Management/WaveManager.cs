@@ -21,7 +21,7 @@ public class WaveManager : MonoBehaviour
         while (currentWaveIndex < waves.Count)
         {
             Wave currentWave = waves[currentWaveIndex];
-            Debug.Log("Starting Wave: " + currentWave.waveName);
+            //Debug.Log("Starting Wave: " + currentWave.waveName);
 
             // Spawn all enemies for the current wave.
             yield return StartCoroutine(SpawnWave(currentWave));
@@ -30,13 +30,13 @@ public class WaveManager : MonoBehaviour
             yield return new WaitUntil(() => AllEnemiesCleared());
 
             // Pause after clearing the wave, giving the player time to act.
-            Debug.Log("Wave complete. Pausing for " + pauseBetweenWaves + " seconds.");
+            //Debug.Log("Wave complete. Pausing for " + pauseBetweenWaves + " seconds.");
             yield return new WaitForSeconds(pauseBetweenWaves);
 
             currentWaveIndex++;
         }
 
-        Debug.Log("All waves complete!");
+        //Debug.Log("All waves complete!");
     }
 
     // Spawns the enemies for a given wave.

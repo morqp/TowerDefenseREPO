@@ -3,8 +3,8 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    public float health = 100f;
-    public float speed = 12f;
+    public float health;
+    public float speed;
 
     public GameObject destination;
 
@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
 
             if (destination != null)
             {
-                Debug.Log("setting destination in enemy");
+                //Debug.Log("setting destination in enemy");
                 agent.SetDestination(destination.transform.position);
                 //agent.autoBraking= false;
                 agent.obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("NavMeshAgent component missing on " + this.gameObject.name);
+            //Debug.LogWarning("NavMeshAgent component missing on " + this.gameObject.name);
         }
     }
 
@@ -70,5 +70,13 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("enemy died");
         Destroy(this.gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("bullet"))
+        {
+            TakeDamage(other.gameObject.GetComponent<BulletScript>().damage);
+        }
     }
 }

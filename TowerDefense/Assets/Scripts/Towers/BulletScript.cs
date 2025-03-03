@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    [SerializeField] private float speed = 10f;
+    public float speed = 10f;
+
+    public float damage = 2f;
 
     private Transform target;
 
@@ -32,6 +34,14 @@ public class BulletScript : MonoBehaviour
 
         target= pTarget.transform;
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 

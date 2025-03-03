@@ -7,6 +7,7 @@ TagManager:
   - Tile
   - floor
   - Enemy
+  - bullet
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - Water
   - UI
   - tiles
-  - bloon
+  - 
   - 
   - 
   - 

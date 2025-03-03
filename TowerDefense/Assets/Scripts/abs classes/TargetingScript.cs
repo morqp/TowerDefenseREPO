@@ -15,15 +15,16 @@ public abstract class TargetingScript : MonoBehaviour
     protected List<GameObject> enemiesInRange = new List<GameObject>();
 
     protected GameObject currentTarget;
-    
-    
+
+
     protected virtual void Start()
     {
-        
+
     }
 
     protected virtual void Update()
     {
+
         if (currentTarget == null)
         {
             ChooseNextTarget();
@@ -34,14 +35,12 @@ public abstract class TargetingScript : MonoBehaviour
 
     protected virtual void OnTriggerEnter(Collider other)
     {
-        Debug.Log("collided with smth");
+
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("ENEMY IN RANGE");
             if (!enemiesInRange.Contains(other.gameObject))
             {
                 enemiesInRange.Add(other.gameObject);
-                Debug.Log("added to the list");
             }
             if (currentTarget == null)
             {
@@ -57,7 +56,6 @@ public abstract class TargetingScript : MonoBehaviour
             enemiesInRange.Remove(other.gameObject);
             if (currentTarget == other.gameObject)
             {
-                Debug.Log("choosing target");
                 ChooseNextTarget();
             }
         }
@@ -68,7 +66,6 @@ public abstract class TargetingScript : MonoBehaviour
         if (enemiesInRange.Count > 0)
         {
             currentTarget = enemiesInRange[0];
-            Debug.Log("choosing target");
 
         }
         else

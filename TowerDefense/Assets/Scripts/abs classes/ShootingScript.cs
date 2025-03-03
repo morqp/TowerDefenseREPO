@@ -8,25 +8,30 @@ public abstract class ShootingScript : TargetingScript
 
     [SerializeField] protected GameObject bulletprefab;
 
+    protected GameObject spawnPos;
 
-    /*
-    protected virtual void Start()
+    
+    protected override void Start()
     {
         base.Start();
+
     }
 
-    protected virtual void Update()
+    protected override void Update()
     {
         base.Update();
+
     }
-    */
+
 
 
     public virtual void Shoot()
-    {
+    {   
+            
         if (currentTarget != null && bulletprefab != null)
         {
-            GameObject projectile = Instantiate(bulletprefab, transform.position, transform.rotation);
+
+            GameObject projectile = Instantiate(bulletprefab, spawnPos.transform.position, spawnPos.transform.rotation);
 
             projectile.GetComponent<BulletScript>().SetTarget(currentTarget);
 
@@ -34,6 +39,8 @@ public abstract class ShootingScript : TargetingScript
         }
 
     }
+
+
 
 
 }
