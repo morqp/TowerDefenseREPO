@@ -76,15 +76,7 @@ public abstract class TargetingScript : MonoBehaviour
         }
     }
 
-    /*
-    protected virtual GameObject ChosenTarget()
-    {
-
-        return currentTarget;
-    }
-    */
-
-
+    
 }
 
 

@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerController : ShootingScript
+public class TowerBase : ShootingScript
 {
     [SerializeField] private float shootingInterval;
     private float shootingTimer;
 
-    [SerializeField] private GameObject inTowerSpawnPos;
+    public GameObject inTowerSpawnPos;
 
-
+    [SerializeField] private GameObject bulletPrefab;
     
 
 
@@ -20,15 +20,12 @@ public class TowerController : ShootingScript
         spawnPos = inTowerSpawnPos;
 
         shootingTimer = shootingInterval;
-    }
 
-    protected override void Update()
-    {
-        base.Update();
-
+        bullet = bulletPrefab;
 
     }
 
+    
     private void OnTriggerStay(Collider other)
     {
         shootingTimer += Time.deltaTime;

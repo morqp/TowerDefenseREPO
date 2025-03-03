@@ -6,32 +6,19 @@ public abstract class ShootingScript : TargetingScript
 {
     //get the bullet prefab and raycast it/instantiate it to the enemy that Shoot picks
 
-    [SerializeField] protected GameObject bulletprefab;
+    public GameObject bullet;
 
     protected GameObject spawnPos;
 
-    
-    protected override void Start()
-    {
-        base.Start();
-
-    }
-
-    protected override void Update()
-    {
-        base.Update();
-
-    }
-
-
+   
 
     public virtual void Shoot()
     {   
             
-        if (currentTarget != null && bulletprefab != null)
+        if (currentTarget != null && bullet != null)
         {
 
-            GameObject projectile = Instantiate(bulletprefab, spawnPos.transform.position, spawnPos.transform.rotation);
+            GameObject projectile = Instantiate(bullet, spawnPos.transform.position, spawnPos.transform.rotation);
 
             projectile.GetComponent<BulletScript>().SetTarget(currentTarget);
 
