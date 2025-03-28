@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
 {
     public float health;
     public float speed;
+    public float reward;
 
     public GameObject destination;
 
@@ -60,7 +61,7 @@ public class Enemy : MonoBehaviour
     public virtual void TakeDamage(float damage)
     {
         health -= damage;
-        if (health <= 0f)
+        if (health <= 0)
         {
             Die();
         }

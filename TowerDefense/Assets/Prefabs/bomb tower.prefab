@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7857139388997726350}
   - component: {fileID: 2854360479354755978}
   m_Layer: 0
-  m_Name: tower
+  m_Name: bomb tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,10 +70,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91858c248feace24e91ef57bf3a236e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletprefab: {fileID: 1997035204259234091, guid: 395a504db8ba3df418c94b21088155f6,
+  bulletprefab: {fileID: 1997035204259234091, guid: 97c9bf4946a53ec4ebb7624185166d39,
     type: 3}
-  cost: 10
-  shootingInterval: 10
+  cost: 12
+  shootingInterval: 15
   inTowerSpawnPos: {fileID: 8055493633518705509}
 --- !u!54 &2854360479354755978
 Rigidbody:
@@ -299,7 +299,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 46fbc13fb099ae24ca845e076caf8bbe, type: 2}
+  - {fileID: 2100000, guid: c4ca9a3d880434142b51bf18e147d98e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TowerController : ShootingScript
 {
+    public float cost;
+
     [SerializeField] private float shootingInterval;
     private float shootingTimer;
 

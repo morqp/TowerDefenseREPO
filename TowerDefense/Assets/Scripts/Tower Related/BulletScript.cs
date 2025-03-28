@@ -10,12 +10,12 @@ public class BulletScript : MonoBehaviour
 
     private Transform target;
 
-    void Start()
+    protected virtual void Start()
     {
         //
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if(target != null)
         {
@@ -23,20 +23,20 @@ public class BulletScript : MonoBehaviour
         }
     }
 
-    private void MoveTowards( Transform pTarget)
+    protected virtual void MoveTowards( Transform pTarget)
     {
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, pTarget.position, step);
     }
 
-    public void SetTarget( GameObject pTarget)
+    public virtual void SetTarget( GameObject pTarget)
     {
 
         target= pTarget.transform;
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
